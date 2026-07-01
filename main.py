@@ -12,13 +12,24 @@ def toBin(num):
 
     return padString + binString
 
-def textTobin(text):
-    binary = ''
+def header(text):
+    mode = '0100'
+    count = 0
     for t in text:
-        binary += toBin(ord(t))
-    return binary
+        count += 1
+    count = toBin(count)
+    return mode + count
+
+def body(text):
+    data = ''
+    for t in text:
+        data += toBin(ord(t))
+    return data
+
+def stream(text):
+    return header(text) + body(text) + "0000"
+
 
 text = input("Enter some text: ")
-binary = textTobin(text)
-
-print(binary)
+final = stream(text)
+print(final)
