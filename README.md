@@ -10,3 +10,13 @@ Process:
 
 Output:
 0100100001000101010011000100110001001111
+
+## Progress
+
+- [x] Binary conversion
+- [x] ASCII encoding
+- [x] QR payload generation
+- [ ] Error correction
+- [ ] Matrix generation
+- [ ] Masking
+- [ ] Rendering
